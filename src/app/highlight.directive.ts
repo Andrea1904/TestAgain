@@ -7,10 +7,7 @@ export class HighlightDirective {
 
   constructor(element: ElementRef)
   {
-
     element.nativeElement.styte.backgroundColor = 'red';
-
-
    }
 
 }
