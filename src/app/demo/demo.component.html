@@ -1,0 +1,19 @@
+<input type="text" [(ngModel)]="title">
+{{title}}
+
+<input type="text" [(ngModel)]="power">
+{{power | exponential}}
+
+<div *ngIf="1===1">
+  Probando el ngIf
+</div>
+
+<button (click)="addItem()">Add item</button>
+
+<ul>
+  <li *ngIf="items.length === 0">la lista esta vacia </li> -- compara y valida si hay info
+  <li *ngFor="let name of items; index as i"> -- recorre el  array
+    {{ name }} {{i}}
+    <button (click)="deleteItem(i)">delete</button>  -- pasa como parametro la i
+  </li>
+</ul>
